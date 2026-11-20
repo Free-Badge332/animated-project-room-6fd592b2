@@ -19,7 +19,7 @@ export const originalMedia: Record<string, string> = {
   "/images/react.webp": "/__l5e/assets-v1/a6d31301-50c2-4cb9-ad63-c73fbda6deca/react.webp",
   "/images/react2.webp": "/__l5e/assets-v1/0354278d-8096-4f88-b6b7-2f6569fcfcf1/react2.webp",
   "/images/typescript.webp": "/__l5e/assets-v1/7b370d7c-af4d-4f2a-a4a2-43243c7baa63/typescript.webp",
-  "/imgs/about-image.png": "/__l5e/assets-v1/9b8c7425-d571-40f9-9fe1-708c9c9bb149/about-image.png",
+  "/imgs/about-image.png": "/__l5e/assets-v1/db683045-7d36-4542-a8c6-a0e69378485d/ezadin-portrait-2.png",
   "/imgs/appr2.png": "/__l5e/assets-v1/5d220e40-f92f-447f-93ce-3333b275f02b/appr2.png",
   "/imgs/appre1.png": "/__l5e/assets-v1/ab557bd4-3b97-42ac-8d2c-884a3e6066f3/appre1.png",
   "/imgs/bago.png": "/__l5e/assets-v1/dce28129-f556-42ea-8750-1d112b982226/bago.png",

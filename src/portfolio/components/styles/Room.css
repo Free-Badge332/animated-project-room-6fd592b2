@@ -160,3 +160,9 @@
 @keyframes roomLoaderShine{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
 @media (prefers-reduced-motion:reduce){.room-loader *,.room-loader *::after{animation:none!important;transform:none!important}}
 .room-loader-box h1 .room-loader-char{color:var(--room-ink)}.room-home .room-loader-logo{border-radius:50%}
+
+/* Contact form layout: stack each label above its full-width field */
+.room-contact-panel .contact-form-fields{display:grid}
+.room-contact-panel .contact-form label{display:flex;flex-direction:column;align-items:stretch;width:100%}
+.room-contact-panel .contact-form input,.room-contact-panel .contact-form textarea{width:100%;box-sizing:border-box;font-family:inherit}
+.room-contact-panel .contact-form textarea{resize:vertical;min-height:110px}

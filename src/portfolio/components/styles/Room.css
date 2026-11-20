@@ -166,3 +166,12 @@
 .room-contact-panel .contact-form label{display:flex;flex-direction:column;align-items:stretch;width:100%}
 .room-contact-panel .contact-form input,.room-contact-panel .contact-form textarea{width:100%;box-sizing:border-box;font-family:inherit}
 .room-contact-panel .contact-form textarea{resize:vertical;min-height:110px}
+
+/* Ezadin's photo in About me and Contact */
+.room-about-photo{position:absolute;right:32px;top:50%;transform:translateY(-50%);z-index:12;width:min(280px,28vw);margin:0;padding:10px;background:var(--room-navigation);border:1px solid var(--room-border);border-radius:14px;box-shadow:var(--room-shadow);animation:roomPhotoIn .6s ease both}
+.room-about-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:10px}
+.room-about-photo figcaption{display:flex;flex-direction:column;gap:2px;padding:10px 4px 2px;color:var(--room-ink);font-size:14px}
+.room-about-photo figcaption span{font-size:12px;opacity:.7}
+.room-contact-avatar{display:block;width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center 20%;margin:0 0 14px;border:2px solid var(--room-border)}
+@keyframes roomPhotoIn{from{opacity:0;transform:translateY(-46%)}to{opacity:1;transform:translateY(-50%)}}
+@media(max-width:768px){.room-about-photo{right:auto;left:50%;top:auto;bottom:80px;transform:translateX(-50%);width:180px;animation:none}}

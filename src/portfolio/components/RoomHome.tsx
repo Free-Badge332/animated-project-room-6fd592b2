@@ -10,6 +10,7 @@ import { roomIsReady, roomLoadingProgress } from "../room/readiness";
 import { wallLayout } from "../room/wallLayout";
 import RoomCharacter from "./RoomCharacter";
 import ContactForm from "./ContactForm";
+import portrait from "@/assets/ezadin-portrait-2.png.asset.json";
 import "./styles/Room.css";
 
 const icons = { skills: Code2, experience: BriefcaseBusiness, certificates: Award, contact: Mail };
@@ -80,10 +81,12 @@ const RoomHome = () => {
         <div className="room-nav-links"><Button asChild variant="ghost"><a href={resumeUrl} download="Ezadin_Resume.pdf"><Download />Download resume</a></Button><Button asChild variant="ghost"><a href="https://github.com/ezadin2" target="_blank" rel="noopener noreferrer"><Github />More on GitHub</a></Button><Button asChild variant="ghost"><a href="mailto:ezadinbadru55@gmail.com"><Mail />Email me</a></Button><Button asChild variant="ghost"><a href="https://www.linkedin.com/in/ezadinbadru/" target="_blank" rel="noopener noreferrer"><ExternalLink />LinkedIn</a></Button></div>
       </nav>
       {focused && section && section !== "contact" && <div className="room-section-caption"><span>{screenSectionTitles[section] || (section === "about" ? "About me" : "Selected projects")}</span>{pages > 1 && <div className="room-pagination"><Button variant="ghost" size="icon" aria-label="Previous wall page" disabled={page === 0} onClick={() => changePage(page - 1)}><ArrowLeft /></Button><span>{page + 1} / {pages}</span><Button variant="ghost" size="icon" aria-label="Next wall page" disabled={page === pages - 1} onClick={() => changePage(page + 1)}><ArrowRight /></Button></div>}<Button variant="ghost" size="icon" aria-label="Back to room" onClick={back}><X /></Button></div>}
+      {section === "about" && <figure className="room-about-photo"><img src={portrait.url} alt="Ezadin Badiru" /><figcaption><strong>Ezadin Badiru</strong><span>Full-stack & Flutter developer · Addis Ababa</span></figcaption></figure>}
       {focused && section === "contact" && (
         <div className="room-contact-backdrop" onClick={back}>
           <aside className="room-contact-panel" role="dialog" aria-modal="true" aria-label="Contact Ezadin" onClick={e => e.stopPropagation()}>
             <Button variant="ghost" size="icon" className="room-contact-close" aria-label="Close contact" onClick={back}><X /></Button>
+            <img className="room-contact-avatar" src={portrait.url} alt="Ezadin Badiru" />
             <ContactForm />
           </aside>
         </div>

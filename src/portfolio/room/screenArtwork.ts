@@ -56,7 +56,7 @@ export function drawScreen(canvas: HTMLCanvasElement, card: SectionScreen, secti
     const bottom = lines(card.title, 168, 62, 800, W - pad * 2, 2);
     if (card.text) {
       const [org, ...rest] = card.text.split("\n");
-      ctx.fillStyle = accent; const next = lines(org, bottom + 18, 44, 700, W - pad * 2, 1);
+      ctx.fillStyle = accent; const next = lines(org ?? "", bottom + 18, 44, 700, W - pad * 2, 1);
       if (rest.length) { ctx.fillStyle = fg; lines(rest.join(" "), next + 12, 40, 500, W - pad * 2, 5); }
     }
   }
